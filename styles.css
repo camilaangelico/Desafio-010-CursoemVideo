@@ -1,10 +1,15 @@
-@meta-charset "UTF-8";
+@charset "UTF-8";
+@font-face {
+    font-family: idroid;
+    src: url(assets/fontes/idroid.otf);
+}
 
 body{
     margin: 0;
     padding: 0;
     width: 100%;
     background-color: #17772c;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header{
@@ -32,20 +37,75 @@ header h1{
     padding: 10px;
 }
 
+#menu a:hover{
+    color: #17772c;
+    background-color: #7bfc85;
+}
+
 main{
     background-color: #7bfc85;
     max-width: 100%;
+    display: grid;
+    justify-content: center;
 }
 
 #conteudo{
     background-color: #fff;
-    max-width: 800px;
+    max-width: 500px;
     display: grid;
-    justify-content: center;
-    justify-items: center;
+    padding: 30px;
+}
+
+#conteudo h2, h3{
+    text-transform: uppercase;
+    text-align: left;
+    font-family: idroid, Arial, Helvetica, sans-serif;
+    color: #17772c;
+}
+
+#conteudo h3{
+    background-color: #baffc085;
+}
+
+#conteudo p{
+    text-indent: 1.5em;
+    line-height: 1.6;
+    
+}
+
+#conteudo a{
+    color: #17772c;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#extra{
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+#titulo{
+    background-color: #17772c;
+    margin: 0;
+}
+
+#conteudoExtra{
+    background-color: #c1fafa;
+}
+
+#extra ul{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, minmax(200px, 6fr));
 }
 
 footer{
     background-color: #17772c;
-    margin: auto;
+    color: #51df5d;
+    padding: 1px;
+    text-align: center;
+}
+
+.destaque{
+    color: #fff;
+    font-weight: bold;
 }
