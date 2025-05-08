@@ -4,12 +4,16 @@
     src: url(assets/fontes/idroid.otf);
 }
 
+*{
+    scrollbar-width: none;
+}
+
 body{
     margin: 0;
     padding: 0;
-    width: 100%;
     background-color: #17772c;
     font-family: Arial, Helvetica, sans-serif;
+    min-width: 390px;
 }
 
 header{
@@ -47,12 +51,15 @@ main{
     max-width: 100%;
     display: grid;
     justify-content: center;
+    justify-items: center;
 }
 
 #conteudo{
     background-color: #fff;
-    max-width: 500px;
-    display: grid;
+    min-width: 300px;
+    max-width: 50%;
+    display: block;
+    justify-content: left;
     padding: 30px;
 }
 
@@ -75,27 +82,44 @@ main{
 
 #conteudo a{
     color: #17772c;
+    background-color: #7bfc85;
     font-weight: bold;
     text-decoration: none;
+}
+
+#conteudo img{
+    width: 100%;
+}
+
+.destaqueConteudo{
+    color: #17772c;
+    font-weight: bold;
 }
 
 #extra{
     border: 1px solid #fff;
     border-radius: 10px;
-}
-
-#titulo{
-    background-color: #17772c;
-    margin: 0;
-}
-
-#conteudoExtra{
     background-color: #c1fafa;
 }
 
+#extra h3{
+    background-color: #17772c;
+    margin: 0;
+    color: #fff;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: initial;
+}
+
+#extra p{
+    padding: 10px;
+    margin: 0;
+}
+
 #extra ul{
-    display: grid;
-    grid-template-columns:repeat(auto-fill, minmax(200px, 6fr));
+    display: column;
+    column-count: 2;
+    
 }
 
 footer{
